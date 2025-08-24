@@ -583,10 +583,16 @@
             Korzystanie z nich odbywa się na własną odpowiedzialność i powinno być zgodne
             z obowiązującym prawem w Twoim kraju. Nie promujemy działań nielegalnych
             i nie ponosimy odpowiedzialności za skutki korzystania z tych serwisów.
+            <br>
+            <span style="opacity: 0.5; display: block; margin-top: 5px;">© 2025 Made by top1malpiszon. Wszelkie prawa zastrzeżone.</span>
         </footer>
     </div>
     <div id="copy-message-container"></div>
     <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
         document.addEventListener('DOMContentLoaded', () => {
             function copyTextToClipboard(text) {
                 const textArea = document.createElement("textarea");
