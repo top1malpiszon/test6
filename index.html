@@ -13,8 +13,8 @@
         body {
             background-color: #000000;
             background-image:
-                radial-gradient(circle at 100% 100%, transparent 10%, #0A0A1A 15%, #1A1A33 20%, #26264D 30%, transparent 45%),
-                radial-gradient(circle at 0% 0%, transparent 10%, #0A0A1A 15%, #1A1A33 20%, #26264D 30%, transparent 45%);
+                radial-gradient(circle at 100% 100%, transparent 10%, #001e36 15%, #001e36 20%, #001e36 30%, transparent 45%),
+                radial-gradient(circle at 0% 0%, transparent 10%, #001e36 15%, #001e36 20%, #001e36 30%, transparent 45%);
             background-size: 200% 200%;
             background-position: 50% 50%;
             animation: ocean-waves 12s ease-in-out infinite alternate;
@@ -55,19 +55,19 @@
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            box-shadow: 0 0 0 4px #42a5f5, 0 0 20px 8px rgba(66, 165, 245, 0.7);
+            box-shadow: 0 0 0 4px #0075d4, 0 0 20px 8px rgba(0, 117, 212, 0.7);
             animation: glow-pulse 2.5s infinite;
         }
 
         @keyframes glow-pulse {
             0% {
-                box-shadow: 0 0 0 4px #42a5f5, 0 0 20px 8px rgba(66, 165, 245, 0.5);
+                box-shadow: 0 0 0 4px #0075d4, 0 0 20px 8px rgba(0, 117, 212, 0.5);
             }
             50% {
-                box-shadow: 0 0 0 4px #66b3ff, 0 0 25px 12px rgba(102, 179, 255, 0.8);
+                box-shadow: 0 0 0 4px #0099ff, 0 0 25px 12px rgba(0, 153, 255, 0.8);
             }
             100% {
-                box-shadow: 0 0 0 4px #42a5f5, 0 0 20px 8px rgba(66, 165, 245, 0.5);
+                box-shadow: 0 0 0 4px #0075d4, 0 0 20px 8px rgba(0, 117, 212, 0.5);
             }
         }
 
@@ -91,7 +91,7 @@
 
         .contact-text {
             margin-right: 5px;
-            color: #42a5f5;
+            color: #0075d4;
         }
 
         .contact-icon {
@@ -134,8 +134,8 @@
 
         .link-button:hover {
             background-color: #0A0A1A;
-            border-color: #42a5f5;
-            box-shadow: 0 0 25px 8px rgba(66, 165, 245, 0.7);
+            border-color: #0075d4;
+            box-shadow: 0 0 25px 8px rgba(0, 117, 212, 0.7);
         }
 
         .link-button .link-icon {
@@ -163,7 +163,7 @@
         }
 
         .link-subtitle.blue-code-text {
-            color: #42a5f5;
+            color: #0075d4;
             opacity: 1;
         }
 
@@ -284,7 +284,7 @@
             left: 0;
             width: 0;
             height: 4px;
-            background-color: #3399ff;
+            background-color: #0075d4;
             transition: width 0.8s ease-in-out;
         }
 
@@ -317,7 +317,7 @@
         }
 
         .copy-message {
-            background-color: #0A0A1A;
+            background-color: #0a1a26;
             color: #ffffff;
             padding: 10px 15px;
             border-radius: 8px;
@@ -612,13 +612,10 @@
                 const messageDiv = document.createElement('div');
                 messageDiv.className = 'copy-message';
                 messageDiv.textContent = messageText;
-
                 container.appendChild(messageDiv);
-
                 setTimeout(() => {
                     messageDiv.classList.add('show');
                 }, 10);
-
                 setTimeout(() => {
                     messageDiv.classList.remove('show');
                     setTimeout(() => {
@@ -631,11 +628,8 @@
                 button.addEventListener('click', (event) => {
                     event.preventDefault();
                     event.stopPropagation();
-
                     const code = event.currentTarget.getAttribute('data-code');
-
                     copyTextToClipboard(code);
-
                     displayCopyMessage('Kod został skopiowany!');
                 });
             });
