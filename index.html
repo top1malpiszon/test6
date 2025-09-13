@@ -2,558 +2,606 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinkrofwest</title>
-    <link rel="shortcut icon" type="image/png" href="images/cinkrofeum.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #000000;
-            background-image:
-                radial-gradient(circle at 100% 100%, transparent 10%, #001e36 15%, #001e36 20%, #001e36 30%, transparent 45%),
-                radial-gradient(circle at 0% 0%, transparent 10%, #001e36 15%, #001e36 20%, #001e36 30%, transparent 45%);
-            background-size: 200% 200%;
-            background-position: 50% 50%;
-            animation: ocean-waves 12s ease-in-out infinite alternate;
-            color: #ffffff;
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinkrofwest</title>
+  <link rel="shortcut icon" type="image/png" href="images/cinkrofeum.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000000;
+      background-image:
+        radial-gradient(circle at 100% 100%, transparent 10%, #001e36 15%, #001e36 20%, #001e36 30%, transparent 45%),
+        radial-gradient(circle at 0% 0%, transparent 10%, #001e36 15%, #001e36 20%, #001e36 30%, transparent 45%);
+      background-size: 200% 200%;
+      background-position: 50% 50%;
+      animation: ocean-waves 12s ease-in-out infinite alternate;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        @keyframes ocean-waves {
-            from {
-                background-position: 0% 0%;
-            }
+    @keyframes ocean-waves {
+      from {
+        background-position: 0% 0%;
+      }
 
-            to {
-                background-position: 100% 100%;
-            }
-        }
+      to {
+        background-position: 100% 100%;
+      }
+    }
 
-        .page-container {
-            width: 100%;
-            max-width: 1150px;
-            padding: 20px;
-            box-sizing: border-box;
-            text-align: center;
-            margin: 0 auto;
-        }
+    .page-container {
+      width: 100%;
+      max-width: 1150px;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      margin: 0 auto;
+    }
 
-        .profile-avatar {
-            margin-top: 20px;
-        }
+    .profile-avatar {
+      margin-top: 20px;
+    }
 
-        .avatar-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 0 0 4px #00A0D0, 0 0 20px 8px rgba(0, 160, 208, 0.7);
-            animation: glow-pulse 5s infinite;
-        }
+    .avatar-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 0 4px #00A0D0, 0 0 20px 8px rgba(0, 160, 208, 0.7);
+      animation: glow-pulse 5s infinite;
+    }
 
-        @keyframes glow-pulse {
-            0% {
-                box-shadow: 0 0 0 4px #00A0D0, 0 0 20px 8px rgba(0, 160, 208, 0.5);
-            }
+    @keyframes glow-pulse {
+      0% {
+        box-shadow: 0 0 0 4px #00A0D0, 0 0 20px 8px rgba(0, 160, 208, 0.5);
+      }
 
-            50% {
-                box-shadow: 0 0 0 4px #00A0D0, 0 0 25px 12px rgba(0, 160, 208, 0.8);
-            }
+      50% {
+        box-shadow: 0 0 0 4px #00A0D0, 0 0 25px 12px rgba(0, 160, 208, 0.8);
+      }
 
-            100% {
-                box-shadow: 0 0 0 4px #00A0D0, 0 0 20px 8px rgba(0, 160, 208, 0.5);
-            }
-        }
+      100% {
+        box-shadow: 0 0 0 4px #00A0D0, 0 0 20px 8px rgba(0, 160, 208, 0.5);
+      }
+    }
 
-        .profile-name {
-            margin-top: 10px;
-            font-size: 24px;
-            font-weight: 900;
-            margin-bottom: 0;
-            color: #ffffff;
-        }
+    .profile-name {
+      margin-top: 10px;
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 0;
+      color: #ffffff;
+    }
 
-        .profile-status {
-            font-size: 14px;
-            font-weight: 700;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            color: #b0e0ff;
-        }
+    .profile-status {
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      color: #b0e0ff;
+    }
 
-        .profile-contact {
-            font-size: 16px;
-            font-weight: 400;
-            margin-top: 5px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-        }
+    .profile-contact {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
 
-        .contact-text {
-            color: #00c4ff;
-            font-weight: 700;
-        }
+    .contact-text {
+      color: #00c4ff;
+      font-weight: 700;
+    }
 
-        .contact-icon {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
-        }
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+    }
 
-        .streams-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: nowrap;
-            gap: 50px;
-            margin: 30px auto;
-        }
+    .streams-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 50px;
+      margin: 30px auto;
+    }
 
-        .stream-container {
-            flex: 1 1 45%;
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-            background-color: rgba(0, 12, 25, 0.5);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            overflow: hidden;
-            box-shadow: 0 0 25px 8px rgba(0, 160, 208, 0.7);
-        }
+    .stream-container {
+      flex: 1 1 45%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0, 12, 25, 0.5);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      box-shadow: 0 0 25px 8px rgba(0, 160, 208, 0.7);
+    }
 
-        .stream-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 15px;
-        }
+    .stream-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+    }
 
-        .stream-title {
-            margin: 0;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
+    .stream-title {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
 
-        .stream-link-button {
-            padding: 6px 12px;
-            border-radius: 8px;
-            background-color: #00A0D0;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+    .stream-link-button {
+      padding: 6px 12px;
+      border-radius: 8px;
+      background-color: #00A0D0;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
 
-        .stream-link-button:hover {
-            background-color: #26B4E3;
-            transform: translateY(-2px);
-        }
+    .stream-link-button:hover {
+      background-color: #26B4E3;
+      transform: translateY(-2px);
+    }
 
-        .iframe-container {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-        }
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+    }
 
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
-        .social-icons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-            margin-top: 20px;
-        }
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-top: 20px;
+    }
 
-        .social-icons-row {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: nowrap;
-        }
+    .social-icons-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: nowrap;
+    }
 
-        .social-icons .link-button {
-            width: 120px;
-            padding: 8px 16px;
-            flex-shrink: 0;
-        }
+    .social-icons .link-button {
+      width: 120px;
+      padding: 8px 16px;
+      flex-shrink: 0;
+    }
 
-        .link-button {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 15px;
-            background-color: rgba(0, 12, 25, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            text-decoration: none;
-            color: #ffffff;
-            transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            flex-shrink: 0;
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-        }
+    .link-button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 15px;
+      background-color: rgba(0, 12, 25, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      text-decoration: none;
+      color: #ffffff;
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
 
-        .link-button:hover {
-            background-color: #0A0A1A;
-            border-color: #00A0D0;
-            box-shadow: 0 0 25px 8px rgba(0, 160, 208, 0.7);
-        }
+    .link-button:hover {
+      background-color: #0A0A1A;
+      border-color: #00A0D0;
+      box-shadow: 0 0 25px 8px rgba(0, 160, 208, 0.7);
+    }
 
-        .link-button .link-icon {
-            width: 48px;
-            height: 48px;
-            margin-right: 15px;
-            border-radius: 8px;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
+    .link-button .link-icon {
+      width: 48px;
+      height: 48px;
+      margin-right: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
 
-        .link-button .link-title {
-            font-weight: 700;
-            font-size: 16px;
-            margin: 0;
-            color: #ffffff;
-        }
+    .link-button .link-title {
+      font-weight: 700;
+      font-size: 16px;
+      margin: 0;
+      color: #ffffff;
+    }
 
-        .link-button .link-subtitle {
-            font-weight: 400;
-            font-size: 12px;
-            opacity: 0.8;
-            margin: 0;
-            color: #B0E0FF;
-        }
+    .link-button .link-subtitle {
+      font-weight: 400;
+      font-size: 12px;
+      opacity: 0.8;
+      margin: 0;
+      color: #B0E0FF;
+    }
 
-        .link-subtitle.purple-code-text {
-            color: #00c4ff;
-            opacity: 0.8;
-            font-weight: 700;
-        }
+    .link-subtitle.purple-code-text {
+      color: #00c4ff;
+      opacity: 0.8;
+      font-weight: 700;
+    }
 
-        .social-icons .link-icon {
-            width: 32px;
-            height: 32px;
-            margin-right: 10px;
-        }
+    .social-icons .link-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
 
-        .social-icons .link-title {
-            font-size: 14px;
-        }
+    .social-icons .link-title {
+      font-size: 14px;
+    }
 
-        .social-icons .link-subtitle {
-            font-size: 10px;
-        }
+    .social-icons .link-subtitle {
+      font-size: 10px;
+    }
 
-        .link-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .link-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .link-text {
-            text-align: left;
-            flex-grow: 1;
-        }
+    .link-text {
+      text-align: left;
+      flex-grow: 1;
+    }
 
-        .links-container {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 30px;
-            align-items: center;
-        }
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 30px;
+      align-items: center;
+    }
 
-        .subtitle-container {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+    .subtitle-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-        .link-image-container {
-            position: relative;
-            border-radius: 6px;
-            overflow: hidden;
-        }
+    .link-image-container {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+    }
 
-        .link-image-container .link-button {
-            padding: 0;
-            display: block;
-        }
+    .link-image-container .link-button {
+      padding: 0;
+      display: block;
+    }
 
-        .link-image-banner {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+    .link-image-banner {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-        .link-title-overlay {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            color: #FFDAB9;
-            font-size: 20px;
-            font-weight: 700;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-        }
+    .link-title-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: #FFDAB9;
+      font-size: 20px;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
 
-        .footer-logo {
-            margin-top: 40px;
-            opacity: 0.7;
-            color: #B0E0FF;
-            font-size: 14px;
-        }
+    .footer-logo {
+      margin-top: 40px;
+      opacity: 0.7;
+      color: #B0E0FF;
+      font-size: 14px;
+    }
 
-        .footer-logo a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 700;
-        }
+    .footer-logo a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+    }
 
-        .age-restriction-image {
-            position: absolute;
-            right: 5px;
-            top: 30px;
-            width: 20px;
-            height: auto;
-            z-index: 2;
-        }
+    .age-restriction-image {
+      position: absolute;
+      right: 5px;
+      top: 30px;
+      width: 20px;
+      height: auto;
+      z-index: 2;
+    }
 
-        .holy-icon {
-            position: absolute;
-            right: 10px;
-            top: 30px;
-            width: 20px;
-            height: 20px;
-            z-index: 2;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
+    .holy-icon {
+      position: absolute;
+      right: 10px;
+      top: 30px;
+      width: 20px;
+      height: 20px;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
 
-        .social-icons .holy-icon {
-            top: 15px;
-        }
+    .social-icons .holy-icon {
+      top: 15px;
+    }
 
-        .link-button:hover .holy-icon {
-            opacity: 1;
-        }
+    .link-button:hover .holy-icon {
+      opacity: 1;
+    }
 
-        .link-loading-bar {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 4px;
-            background-color: #00A0D0;
-            transition: width 0.8s ease-in-out;
-        }
+    .link-loading-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background-color: #00A0D0;
+      transition: width 0.8s ease-in-out;
+    }
 
-        .link-button:hover .link-loading-bar {
-            width: 100%;
-        }
+    .link-button:hover .link-loading-bar {
+      width: 100%;
+    }
 
-        .copy-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #d1d1d1;
-            transition: color 0.3s ease;
-        }
+    .copy-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #d1d1d1;
+      transition: color 0.3s ease;
+    }
 
-        .copy-button:hover {
-            color: #ffffff;
-        }
+    .copy-button:hover {
+      color: #ffffff;
+    }
 
-        #copy-message-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            pointer-events: none;
-        }
+    #copy-message-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      pointer-events: none;
+    }
 
-        .copy-message {
-            background-color: rgba(0, 160, 208, 0.7);
-            color: #ffffff;
-            padding: 10px 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            font-size: 14px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-        }
+    .copy-message {
+      background-color: rgba(0, 160, 208, 0.7);
+      color: #ffffff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      font-size: 14px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    }
 
-        .copy-message.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .copy-message.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-        .section-separator {
-            width: 100%;
-            max-width: 500px;
-            height: 2px;
-            background-image: linear-gradient(to right, rgba(0, 160, 208, 0.3), #00A0D0, rgba(0, 160, 208, 0.3));
-            margin: 40px auto;
-            border-radius: 1px;
-            opacity: 0.8;
-        }
+    .section-separator {
+      width: 100%;
+      max-width: 500px;
+      height: 2px;
+      background-image: linear-gradient(to right, rgba(0, 160, 208, 0.3), #00A0D0, rgba(0, 160, 208, 0.3));
+      margin: 40px auto;
+      border-radius: 1px;
+      opacity: 0.8;
+    }
 
-        .stream-separator {
-            width: 100%;
-            max-width: 850px;
-            height: 2px;
-            background-image: linear-gradient(to right, rgba(0, 160, 208, 0.3), #00A0D0, rgba(0, 160, 208, 0.3));
-            margin: 40px auto;
-            border-radius: 1px;
-            opacity: 0.8;
-        }
+    .stream-separator {
+      width: 100%;
+      max-width: 850px;
+      height: 2px;
+      background-image: linear-gradient(to right, rgba(0, 160, 208, 0.3), #00A0D0, rgba(0, 160, 208, 0.3));
+      margin: 40px auto;
+      border-radius: 1px;
+      opacity: 0.8;
+    }
+    
+    .sponsor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 50px;
+        width: 100%;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+    
+    .sponsor-square {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .sponsor-square .link-icon {
+        width: 60px;
+        height: 60px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 
-        @media (max-width: 600px) {
-            .social-icons {
-                flex-direction: column;
-                flex-wrap: wrap;
-            }
+    .sponsor-square .link-text {
+        text-align: center;
+        flex-grow: 0;
+    }
+    
+    .sponsor-square .link-title {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    
+    .sponsor-square .link-subtitle {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
 
-            .link-button {
-                justify-content: flex-start;
-            }
+    .sponsor-square .subtitle-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .streams-container {
-                flex-direction: column;
-            }
-        }
-    </style>
+    .sponsor-square .age-restriction-image {
+        top: 10px;
+        right: 10px;
+    }
+    
+    @media (max-width: 600px) {
+      .social-icons {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      .link-button {
+        justify-content: flex-start;
+      }
+
+      .streams-container {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="page-container">
-        <header class="profile-header">
-            <div class="profile-avatar">
-                <img src="images/cinkrof.png" alt="Cinkrofwest Avatar" class="avatar-image">
+  <div class="page-container">
+    <header class="profile-header">
+      <div class="profile-avatar">
+        <img src="images/cinkrof.png" alt="Cinkrofwest Avatar" class="avatar-image">
+      </div>
+      <h1 class="profile-name">Cinkrofwest</h1>
+      <p class="profile-status">0/14 lec 3x eum</p>
+      <p class="profile-contact">
+        <span style="color: #00c4ff; font-weight: 700;">Kontakt:</span>
+        <span class="contact-text">cinkrof@stormmedia.gg</span>
+        <img src="images/cinkrofeum.png" alt="Biznesowy avatar" class="contact-icon">
+      </p>
+      <div class="social-icons">
+        <div class="social-icons-row">
+          <a href="https://www.twitch.tv/cinkrofwest" target="_blank" class="link-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="holy-icon">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" x2="21" y1="14" y2="3" />
+            </svg>
+            <div class="link-icon">
+              <img src="images/twitch4.png" alt="Twitch Logo">
             </div>
-            <h1 class="profile-name">Cinkrofwest</h1>
-            <p class="profile-status">0/14 lec 3x eum</p>
-            <p class="profile-contact">
-                <span style="color: #00c4ff; font-weight: 700;">Kontakt:</span> <span class="contact-text">cinkrof@stormmedia.gg</span>
-                <img src="images/cinkrofeum.png" alt="Biznesowy avatar" class="contact-icon">
-            </p>
-            <div class="social-icons">
-                <div class="social-icons-row">
-                    <a href="https://www.twitch.tv/cinkrofwest" target="_blank" class="link-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="holy-icon">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                            <polyline points="15 3 21 3 21 9" />
-                            <line x1="10" x2="21" y1="14" y2="3" />
-                        </svg>
-                        <div class="link-icon">
-                            <img src="images/twitch4.png" alt="Twitch Logo">
-                        </div>
-                        <div class="link-text">
-                            <p class="link-title">Twitch</p>
-                        </div>
-                        <div class="link-loading-bar"></div>
-                    </a>
-                    <a href="https://www.instagram.com/cinkroflol/" target="_blank" class="link-button">
-                        <div class="link-icon">
-                            <img src="images/instagram5.png" alt="Instagram Logo">
-                        </div>
-                        <div class="link-text">
-                            <p class="link-title">Instagram</p>
-                        </div>
-                        <div class="link-loading-bar"></div>
-                    </a>
-                </div>
-                <div class="social-icons-row">
-                    <a href="https://x.com/cinkrofcentrum" target="_blank" class="link-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="holy-icon">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                            <polyline points="15 3 21 3 21 9" />
-                            <line x1="10" x2="21" y1="14" y2="3" />
-                        </svg>
-                        <div class="link-icon">
-                            <img src="images/twitter.png" alt="twitter Logo">
-                        </div>
-                        <div class="link-text">
-                            <p class="link-title">Twitter</p>
-                        </div>
-                        <div class="link-loading-bar"></div>
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCD26frjVAtM7hGmfFH6bXyQ"
-                        target="_blank" class="link-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="holy-icon">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                            <polyline points="15 3 21 3 21 9" />
-                            <line x1="10" x2="21" y1="14" y2="3" />
-                        </svg>
-                        <div class="link-icon">
-                            <img src="images/yt4.png" alt="yt Logo">
-                        </div>
-                        <div class="link-text">
-                            <p class="link-title">Youtube</p>
-                        </div>
-                        <div class="link-loading-bar"></div>
-                    </a>
-                    <a href="https://discord.com/invite/ZjM3Yrw?fbclid=IwAR1jLdR_q60uFuacMWVyuNA5-oWZt-6BPqeLenjotyIhjFGb8hQ2sgKCPJo" target="_blank" class="link-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="holy-icon">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                            <polyline points="15 3 21 3 21 9" />
-                            <line x1="10" x2="21" y1="14" y2="3" />
-                        </svg>
-                        <div class="link-icon">
-                            <img src="images/discord2.png" alt="dc Logo">
-                        </div>
-                        <div class="link-text">
-                            <p class="link-title">Discord</p>
-                        </div>
-                        <div class="link-loading-bar"></div>
-                    </a>
-                </div>
+            <div class="link-text">
+              <p class="link-title">Twitch</p>
             </div>
-        </header>
-        <div class="section-separator"></div>
-        <main class="links-container">
-            <a href="https://casehug.com/r/CINKROF" target="_blank" class="link-button">
+            <div class="link-loading-bar"></div>
+          </a>
+          <a href="https://www.instagram.com/cinkroflol/" target="_blank" class="link-button">
+            <div class="link-icon">
+              <img src="images/instagram5.png" alt="Instagram Logo">
+            </div>
+            <div class="link-text">
+              <p class="link-title">Instagram</p>
+            </div>
+            <div class="link-loading-bar"></div>
+          </a>
+        </div>
+        <div class="social-icons-row">
+          <a href="https://x.com/cinkrofcentrum" target="_blank" class="link-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="holy-icon">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" x2="21" y1="14" y2="3" />
+            </svg>
+            <div class="link-icon">
+              <img src="images/twitter.png" alt="twitter Logo">
+            </div>
+            <div class="link-text">
+              <p class="link-title">Twitter</p>
+            </div>
+            <div class="link-loading-bar"></div>
+          </a>
+          <a href="https://www.youtube.com/channel/UCD26frjVAtM7hGmfFH6bXyQ" target="_blank" class="link-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="holy-icon">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" x2="21" y1="14" y2="3" />
+            </svg>
+            <div class="link-icon">
+              <img src="images/yt4.png" alt="yt Logo">
+            </div>
+            <div class="link-text">
+              <p class="link-title">Youtube</p>
+            </div>
+            <div class="link-loading-bar"></div>
+          </a>
+          <a href="https://discord.com/invite/ZjM3Yrw?fbclid=IwAR1jLdR_q60uFuacMWVyuNA5-oWZt-6BPqeLenjotyIhjFGb8hQ2sgKCPJo"
+            target="_blank" class="link-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="holy-icon">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" x2="21" y1="14" y2="3" />
+            </svg>
+            <div class="link-icon">
+              <img src="images/discord2.png" alt="dc Logo">
+            </div>
+            <div class="link-text">
+              <p class="link-title">Discord</p>
+            </div>
+            <div class="link-loading-bar"></div>
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="section-separator"></div>
+    <main class="links-container">
+        <div class="sponsor-grid">
+            <a href="https://casehug.com/r/CINKROF" target="_blank" class="link-button sponsor-square">
                 <img src="images/tylko18x.png" alt="18+" class="age-restriction-image">
                 <div class="link-icon">
                     <img src="images/casehug2.png" alt="casehug icon">
                 </div>
                 <div class="link-text">
-                    <p class="link-title">CASEHUG - 1$ I 20% BONUSU PRZY WPŁACIE</p>
+                    <p class="link-title">CASEHUG</p>
                     <div class="subtitle-container">
                         <p class="link-subtitle purple-code-text">Kod: CINKROF</p>
                         <button class="copy-button" data-code="CINKROF">
@@ -567,13 +615,13 @@
                 </div>
                 <div class="link-loading-bar"></div>
             </a>
-            <a href="https://pirateswap.com/pl?ref=cinkrof" target="_blank" class="link-button">
+            <a href="https://pirateswap.com/pl?ref=cinkrof" target="_blank" class="link-button sponsor-square">
                 <img src="images/tylko18x.png" alt="18+" class="age-restriction-image">
                 <div class="link-icon">
                     <img src="images/pirateswap.png" alt="PIRATESWAP icon">
                 </div>
                 <div class="link-text">
-                    <p class="link-title">PIRATESWAP - BONUS 35% DO DEPOZYTU</p>
+                    <p class="link-title">PIRATESWAP</p>
                     <div class="subtitle-container">
                         <p class="link-subtitle purple-code-text">Kod: CINKROF</p>
                         <button class="copy-button" data-code="CINKROF">
@@ -587,13 +635,13 @@
                 </div>
                 <div class="link-loading-bar"></div>
             </a>
-            <a href="https://p.skin.place/CINKROF" target="_blank" class="link-button">
+            <a href="https://p.skin.place/CINKROF" target="_blank" class="link-button sponsor-square">
                 <img src="images/tylko18x.png" alt="18+" class="age-restriction-image">
                 <div class="link-icon">
                     <img src="images/skinplace.png" alt="skinplace icon">
                 </div>
                 <div class="link-text">
-                    <p class="link-title">SKINPLACE - SPRZEDAJ SWOJE SKINY!</p>
+                    <p class="link-title">SKINPLACE</p>
                     <div class="subtitle-container">
                         <p class="link-subtitle purple-code-text">Kod: CINKROF</p>
                         <button class="copy-button" data-code="CINKROF">
@@ -607,10 +655,25 @@
                 </div>
                 <div class="link-loading-bar"></div>
             </a>
-            <a href="https://streamelements.com/cinkrofwest/tip" target="_blank" class="link-button">
+            <a href="https://kick.com/cinkrofwest" target="_blank" class="link-button sponsor-square">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="holy-icon">
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="holy-icon">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" x2="21" y1="14" y2="3" />
+                </svg>
+                <div class="link-icon">
+                    <img src="images/kick.png" alt="DONO icon">
+                </div>
+                <div class="link-text">
+                    <p class="link-title">KICK</p>
+                    <p class="link-subtitle purple-code-text">ZOSTAW FOLLOW NA KICKU!</p>
+                </div>
+                <div class="link-loading-bar"></div>
+            </a>
+            <a href="https://streamelements.com/cinkrofwest/tip" target="_blank" class="link-button sponsor-square">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="holy-icon">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                     <polyline points="15 3 21 3 21 9" />
                     <line x1="10" x2="21" y1="14" y2="3" />
@@ -624,58 +687,41 @@
                 </div>
                 <div class="link-loading-bar"></div>
             </a>
-            <a href="https://kick.com/cinkrofwest" target="_blank" class="link-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="holy-icon">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" x2="21" y1="14" y2="3" />
-                </svg>
-                <div class="link-icon">
-                    <img src="images/kick.png" alt="DONO icon">
-                </div>
-                <div class="link-text">
-                    <p class="link-title">KICK</p>
-                    <p class="link-subtitle purple-code-text">ZOSTAW FOLLOW NA KICKU!</p>
-                </div>
-                <div class="link-loading-bar"></div>
-            </a>
-        </main>
-        <div class="stream-separator"></div>
-        <div class="streams-container">
-            <div class="stream-container">
-                <div class="stream-header">
-                    <h3 class="stream-title">Stream na Kick</h3>
-                    <a href="https://kick.com/cinkrofwest" target="_blank" class="stream-link-button">DOŁĄCZ!</a>
-                </div>
-                <div class="iframe-container">
-                    <iframe id="kick-stream" src="" scrolling="no" allowfullscreen="true" width="100%"
-                        height="100%"></iframe>
-                </div>
-            </div>
-            <div class="stream-container">
-                <div class="stream-header">
-                    <h3 class="stream-title">Stream na Twitch</h3>
-                    <a href="https://www.twitch.tv/cinkrofwest" target="_blank" class="stream-link-button">DOŁĄCZ!</a>
-                </div>
-                <div class="iframe-container">
-                    <iframe id="twitch-stream" src="" frameborder="0" allowfullscreen="true" scrolling="no"
-                        height="100%" width="100%"></iframe>
-                </div>
-            </div>
         </div>
-        <div class="stream-separator"></div>
-        <footer style="margin-top:40px; font-size:11px; color:#aaa; text-align:center; line-height:1.4; opacity:0.8;">
-            <strong>⚠️ GRAJ ODPOWIEDZIALNIE! ⚠️</strong><br>
-            Strona zawiera linki do zewnętrznych serwisów. Korzystanie z nich odbywa się na własną odpowiedzialność i powinno być zgodne z obowiązującym prawem w Twoim kraju. Nie promujemy działań nielegalnych i nie zachęcamy do działań niezgodnych z prawem i nie ponosimy odpowiedzialności za konsekwencje wynikające z korzystania z tych stron.
-            <br>
-            <span style="opacity: 1; display: block; margin-top: 5px; color: #00c4ff; font-weight: 700;">© 2025 Made by top1malpiszon. Wszelkie prawa zastrzeżone.</span>
-        </footer>
+    </main>
+    <div class="stream-separator"></div>
+    <div class="streams-container">
+      <div class="stream-container">
+        <div class="stream-header">
+          <h3 class="stream-title">Stream na Kick</h3>
+          <a href="https://kick.com/cinkrofwest" target="_blank" class="stream-link-button">DOŁĄCZ!</a>
+        </div>
+        <div class="iframe-container">
+          <iframe id="kick-stream" src="" scrolling="no" allowfullscreen="true" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+      <div class="stream-container">
+        <div class="stream-header">
+          <h3 class="stream-title">Stream na Twitch</h3>
+          <a href="https://www.twitch.tv/cinkrofwest" target="_blank" class="stream-link-button">DOŁĄCZ!</a>
+        </div>
+        <div class="iframe-container">
+          <iframe id="twitch-stream" src="" frameborder="0" allowfullscreen="true" scrolling="no" height="100%"
+            width="100%"></iframe>
+        </div>
+      </div>
     </div>
-    <div id="copy-message-container"></div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
+    <div class="stream-separator"></div>
+    <footer style="margin-top:40px; font-size:11px; color:#aaa; text-align:center; line-height:1.4; opacity:0.8;">
+      <strong>⚠️ GRAJ ODPOWIEDZIALNIE! ⚠️</strong><br>
+            Strona zawiera linki do zewnętrznych serwisów. Korzystanie z nich odbywa się na własną odpowiedzialność i powinno być zgodne z obowiązującym prawem w Twoim kraju. Nie promujemy działań nielegalnych i nie zachęcamy do działań niezgodnych z prawem i nie ponosimy odpowiedzialności za konsekwencje wynikające z korzystania z tych stron.
+      <br>
+      <span style="opacity: 1; display: block; margin-top: 5px; color: #00c4ff; font-weight: 700;">© 2025 Made by top1malpiszon. Wszelkie prawa zastrzeżone.</span>
+    </footer>
+  </div>
+  <div id="copy-message-container"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
             const kickIframe = document.getElementById('kick-stream');
             const twitchIframe = document.getElementById('twitch-stream');
             const currentHostname = window.location.hostname;
@@ -767,7 +813,7 @@
 
             updateAllThumbnails();
         });
-    </script>
+  </script>
 </body>
 
 </html>
